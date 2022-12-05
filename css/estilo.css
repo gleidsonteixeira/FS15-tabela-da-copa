@@ -11,10 +11,8 @@ table{
     border-collapse: collapse;
 }
 table td{
-    /* border: 1px solid black; */
-}
-table td.alinhar-a-direita{
-    text-align: right;
+    padding: 16px;
+    /* border: 1px solid white; */
 }
 table td .bandeira{
     width: 60px;
@@ -38,4 +36,60 @@ table td .bandeira h4{
 }
 table td .separador{
     height: 20px;
+}
+table td .borda{
+    border: 3px solid white;
+    width: 150px;
+}
+table td .alinhar-ao-centro{
+    margin: 0 auto;
+}
+#logo{
+    height: 200px;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+table td .borda.grupo{
+    position: relative;
+}
+table td .borda.grupo .bandeira{
+    margin-left: 70px;
+}
+table td .borda.grupo::after{
+    content: "";
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #ffffff60;
+}
+table td .borda.grupo.grupo-a::after{
+    content: "A";
+}
+table td .borda.grupo.grupo-b::after{
+    content: "B";
+}
+table td .borda.grupo.grupo-c::after{
+    content: "C";
+}
+table td .borda.oitavas{
+    position: relative;
+}
+table td .borda.oitavas::before{
+    content: "Oitavas";
+    position: absolute;
+    bottom: 110%;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff60;
+    width: 100%;
+    text-align: center;
 }
